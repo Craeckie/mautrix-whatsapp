@@ -50,7 +50,7 @@ func New(dbType string, uri string, baseLog log.Logger) (*Database, error) {
 
 	db := &Database{
 		DB:      conn,
-		log:     baseLog.Sub("Database"),
+		log:     log.Sub("Database"),
 		dialect: dbType,
 	}
 	db.User = &UserQuery{
